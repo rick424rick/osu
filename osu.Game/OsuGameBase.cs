@@ -39,6 +39,8 @@ using osu.Game.Scoring;
 using osu.Game.Skinning;
 using osuTK.Input;
 using RuntimeInfo = osu.Framework.RuntimeInfo;
+using System.Threading;
+using System.Globalization;
 
 namespace osu.Game
 {
@@ -106,6 +108,8 @@ namespace osu.Game
         protected Bindable<WorkingBeatmap> Beatmap { get; private set; } // cached via load() method
 
         private Bindable<bool> fpsDisplayVisible;
+
+        private Bindable<Locale> currentLocale;
 
         public virtual Version AssemblyVersion => Assembly.GetEntryAssembly()?.GetName().Version ?? new Version();
 
@@ -193,6 +197,20 @@ namespace osu.Game
 
             dependencies.Cache(SkinManager = new SkinManager(Storage, contextFactory, Host, Audio, new NamespacedResourceStore<byte[]>(Resources, "Skins/Legacy")));
             dependencies.CacheAs<ISkinSource>(SkinManager);
+
+            // needs to be done here rather than inside SkinManager to ensure thread safety of CurrentSkinInfo.
+            SkinManager.ItemRemoved.BindValueChanged(weakRemovedInfo =>
+            {
+                if (weakRemovedInfo.NewValue.TryGetTarget(out var removedInfo))
+                {
+                    Schedule(() =>
+                    {
+                        // check the removed skin is not the current user choice. if it is, switch back to default.
+                        if (removedInfo.ID == SkinManager.CurrentSkinInfo.Value.ID)
+                            SkinManager.CurrentSkinInfo.Value = SkinInfo.Default;
+                    });
+                }
+            });
 
             dependencies.CacheAs(API ??= new APIAccess(LocalConfig));
 
@@ -319,6 +337,28 @@ namespace osu.Game
             fpsDisplayVisible.TriggerChange();
 
             FrameStatistics.ValueChanged += e => fpsDisplayVisible.Value = e.NewValue != FrameStatisticsMode.None;
+
+            currentLocale = LocalConfig.GetBindable<Locale>(OsuSetting.Locale);
+            currentLocale.ValueChanged += updateLocale;
+            currentLocale.TriggerChange();
+        }
+
+        private void updateLocale(ValueChangedEvent<Locale> obj)
+        {
+            switch(obj.NewValue)
+            {
+                case Locale.English:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+                    break;
+                case Locale.Chinese:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+                    break;
+                case Locale.Japanese:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void runMigrations()

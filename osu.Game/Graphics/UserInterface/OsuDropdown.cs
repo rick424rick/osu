@@ -171,7 +171,7 @@ namespace osu.Game.Graphics.UserInterface
                     public string Text
                     {
                         get => Label.Text;
-                        set => Label.Text = value;
+                        set => Label.Text = Properties.strings.ResourceManager.GetString(value) ?? value;
                     }
 
                     public readonly OsuSpriteText Label;
@@ -218,7 +218,7 @@ namespace osu.Game.Graphics.UserInterface
             protected override string Label
             {
                 get => Text.Text;
-                set => Text.Text = value;
+                set => Text.Text = Properties.strings.ResourceManager.GetString(value) ?? value;
             }
 
             protected readonly SpriteIcon Icon;
