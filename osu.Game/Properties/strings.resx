@@ -120,6 +120,12 @@
   <data name="BackgroundSource" xml:space="preserve">
     <value>Background source</value>
   </data>
+  <data name="ChangeBehavior" xml:space="preserve">
+    <value>change the way osu! behaves</value>
+  </data>
+  <data name="ChangeFolder" xml:space="preserve">
+    <value>Change folder location...</value>
+  </data>
   <data name="Chinese" xml:space="preserve">
     <value>Chinese</value>
   </data>
@@ -128,6 +134,12 @@
   </data>
   <data name="exit" xml:space="preserve">
     <value>exit</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>Graphics</value>
   </data>
   <data name="InterfaceVoices" xml:space="preserve">
     <value>Interface voices</value>
@@ -147,14 +159,50 @@
   <data name="MainMenu" xml:space="preserve">
     <value>Main menu</value>
   </data>
+  <data name="metaPref" xml:space="preserve">
+    <value>Prefer metadata in original language</value>
+  </data>
   <data name="MusicTheme" xml:space="preserve">
     <value>osu! music theme</value>
+  </data>
+  <data name="news" xml:space="preserve">
+    <value>news</value>
+  </data>
+  <data name="newsUpdate" xml:space="preserve">
+    <value>get up-to-date on community happenings</value>
+  </data>
+  <data name="OpenFolder" xml:space="preserve">
+    <value>Open osu! folder</value>
+  </data>
+  <data name="osudirect" xml:space="preserve">
+    <value>osu!direct</value>
+  </data>
+  <data name="osueditor" xml:space="preserve">
+    <value>osu!editor</value>
+  </data>
+  <data name="play" xml:space="preserve">
+    <value>play</value>
+  </data>
+  <data name="ReleaseStream" xml:space="preserve">
+    <value>Release stream</value>
+  </data>
+  <data name="Renderer" xml:space="preserve">
+    <value>Renderer</value>
   </data>
   <data name="RevertToDefault" xml:space="preserve">
     <value>Revert to default</value>
   </data>
+  <data name="search" xml:space="preserve">
+    <value>type to search</value>
+  </data>
   <data name="SeasonalBackgrounds" xml:space="preserve">
     <value>Seasonal backgrounds</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>Updates</value>
   </data>
   <data name="UserInterface" xml:space="preserve">
     <value>User Interface</value>

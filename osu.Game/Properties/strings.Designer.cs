@@ -70,6 +70,24 @@ namespace osu.Game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to change the way osu! behaves.
+        /// </summary>
+        internal static string ChangeBehavior {
+            get {
+                return ResourceManager.GetString("ChangeBehavior", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change folder location....
+        /// </summary>
+        internal static string ChangeFolder {
+            get {
+                return ResourceManager.GetString("ChangeFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chinese.
         /// </summary>
         internal static string Chinese {
@@ -93,6 +111,24 @@ namespace osu.Game.Properties {
         internal static string exit {
             get {
                 return ResourceManager.GetString("exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string General {
+            get {
+                return ResourceManager.GetString("General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Graphics.
+        /// </summary>
+        internal static string Graphics {
+            get {
+                return ResourceManager.GetString("Graphics", resourceCulture);
             }
         }
         
@@ -151,11 +187,92 @@ namespace osu.Game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prefer metadata in original language.
+        /// </summary>
+        internal static string metaPref {
+            get {
+                return ResourceManager.GetString("metaPref", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to osu! music theme.
         /// </summary>
         internal static string MusicTheme {
             get {
                 return ResourceManager.GetString("MusicTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to news.
+        /// </summary>
+        internal static string news {
+            get {
+                return ResourceManager.GetString("news", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to get up-to-date on community happenings.
+        /// </summary>
+        internal static string newsUpdate {
+            get {
+                return ResourceManager.GetString("newsUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open osu! folder.
+        /// </summary>
+        internal static string OpenFolder {
+            get {
+                return ResourceManager.GetString("OpenFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to osu!direct.
+        /// </summary>
+        internal static string osudirect {
+            get {
+                return ResourceManager.GetString("osudirect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to osu!editor.
+        /// </summary>
+        internal static string osueditor {
+            get {
+                return ResourceManager.GetString("osueditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to play.
+        /// </summary>
+        internal static string play {
+            get {
+                return ResourceManager.GetString("play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Release stream.
+        /// </summary>
+        internal static string ReleaseStream {
+            get {
+                return ResourceManager.GetString("ReleaseStream", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Renderer.
+        /// </summary>
+        internal static string Renderer {
+            get {
+                return ResourceManager.GetString("Renderer", resourceCulture);
             }
         }
         
@@ -169,11 +286,38 @@ namespace osu.Game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to type to search.
+        /// </summary>
+        internal static string search {
+            get {
+                return ResourceManager.GetString("search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Seasonal backgrounds.
         /// </summary>
         internal static string SeasonalBackgrounds {
             get {
                 return ResourceManager.GetString("SeasonalBackgrounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updates.
+        /// </summary>
+        internal static string Updates {
+            get {
+                return ResourceManager.GetString("Updates", resourceCulture);
             }
         }
         

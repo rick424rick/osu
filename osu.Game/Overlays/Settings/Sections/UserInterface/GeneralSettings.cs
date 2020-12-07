@@ -10,7 +10,7 @@ namespace osu.Game.Overlays.Settings.Sections.UserInterface
 {
     public class GeneralSettings : SettingsSubsection
     {
-        protected override string Header => "General";
+        protected override string Header => Properties.strings.General;
 
         [BackgroundDependencyLoader]
         private void load(OsuConfigManager config)

@@ -9,7 +9,7 @@ namespace osu.Game.Overlays.Settings.Sections
 {
     public class GeneralSection : SettingsSection
     {
-        public override string Header => "General";
+        public override string Header => Properties.strings.General;
 
         public override Drawable CreateIcon() => new SpriteIcon
         {

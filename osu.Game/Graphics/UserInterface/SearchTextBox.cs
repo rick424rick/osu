@@ -27,7 +27,7 @@ namespace osu.Game.Graphics.UserInterface
             });
 
             TextFlow.Padding = new MarginPadding { Right = 35 };
-            PlaceholderText = "type to search";
+            PlaceholderText = Properties.strings.search;
         }
 
         public override bool OnPressed(PlatformAction action)

@@ -16,8 +16,8 @@ namespace osu.Game.Overlays
     public class SettingsOverlay : SettingsPanel, INamedOverlayComponent
     {
         public string IconTexture => "Icons/Hexacons/settings";
-        public string Title => "settings";
-        public string Description => "change the way osu! behaves";
+        public string Title => Properties.strings.Settings;
+        public string Description => Properties.strings.ChangeBehavior;
 
         protected override IEnumerable<SettingsSection> CreateSections() => new SettingsSection[]
         {

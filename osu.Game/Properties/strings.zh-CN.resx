@@ -120,6 +120,12 @@
   <data name="BackgroundSource" xml:space="preserve">
     <value>背景源</value>
   </data>
+  <data name="ChangeBehavior" xml:space="preserve">
+    <value>改变osu!的行为方式</value>
+  </data>
+  <data name="ChangeFolder" xml:space="preserve">
+    <value>更改文件夹位置...</value>
+  </data>
   <data name="Chinese" xml:space="preserve">
     <value>中文</value>
   </data>
@@ -127,7 +133,13 @@
     <value>音乐</value>
   </data>
   <data name="exit" xml:space="preserve">
-    <value>出口</value>
+    <value>退出</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>通用</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>图像</value>
   </data>
   <data name="InterfaceVoices" xml:space="preserve">
     <value>接口语音</value>
@@ -147,14 +159,50 @@
   <data name="MainMenu" xml:space="preserve">
     <value>主菜单</value>
   </data>
+  <data name="metaPref" xml:space="preserve">
+    <value>使用初始语言于元数据</value>
+  </data>
   <data name="MusicTheme" xml:space="preserve">
     <value>osu! 音乐神</value>
+  </data>
+  <data name="news" xml:space="preserve">
+    <value>新闻</value>
+  </data>
+  <data name="newsUpdate" xml:space="preserve">
+    <value>社区新鲜事</value>
+  </data>
+  <data name="OpenFolder" xml:space="preserve">
+    <value>打开osu!文件夹</value>
+  </data>
+  <data name="osudirect" xml:space="preserve">
+    <value>osu!直连</value>
+  </data>
+  <data name="osueditor" xml:space="preserve">
+    <value>osu!编辑器</value>
+  </data>
+  <data name="play" xml:space="preserve">
+    <value>开始游戏</value>
+  </data>
+  <data name="ReleaseStream" xml:space="preserve">
+    <value>发布流</value>
+  </data>
+  <data name="Renderer" xml:space="preserve">
+    <value>渲染器</value>
   </data>
   <data name="RevertToDefault" xml:space="preserve">
     <value>还原为默认值</value>
   </data>
+  <data name="search" xml:space="preserve">
+    <value>键入搜索关键词</value>
+  </data>
   <data name="SeasonalBackgrounds" xml:space="preserve">
     <value>季节性背景</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>更新</value>
   </data>
   <data name="UserInterface" xml:space="preserve">
     <value>用户界面</value>

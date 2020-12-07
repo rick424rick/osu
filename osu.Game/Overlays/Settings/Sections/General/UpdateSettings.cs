@@ -19,7 +19,7 @@ namespace osu.Game.Overlays.Settings.Sections.General
         [Resolved(CanBeNull = true)]
         private UpdateManager updateManager { get; set; }
 
-        protected override string Header => "Updates";
+        protected override string Header => Properties.strings.Updates;
 
         private SettingsButton checkForUpdatesButton;
 
@@ -31,7 +31,7 @@ namespace osu.Game.Overlays.Settings.Sections.General
         {
             Add(new SettingsEnumDropdown<ReleaseStream>
             {
-                LabelText = "Release stream",
+                LabelText = Properties.strings.ReleaseStream,
                 Current = config.GetBindable<ReleaseStream>(OsuSetting.ReleaseStream),
             });
 
@@ -64,13 +64,13 @@ namespace osu.Game.Overlays.Settings.Sections.General
             {
                 Add(new SettingsButton
                 {
-                    Text = "Open osu! folder",
+                    Text = Properties.strings.OpenFolder,
                     Action = storage.OpenInNativeExplorer,
                 });
 
                 Add(new SettingsButton
                 {
-                    Text = "Change folder location...",
+                    Text = Properties.strings.ChangeFolder,
                     Action = () => game?.PerformFromScreen(menu => menu.Push(new MigrationSelectScreen()))
                 });
             }
