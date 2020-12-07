@@ -37,7 +37,10 @@ namespace osu.Game.Graphics.UserInterface
                 MaxHeight = 400;
             }
 
-            protected override DrawableDropdownMenuItem CreateDrawableDropdownMenuItem(MenuItem item) => new DrawableOsuTabDropdownMenuItem(item) { AccentColour = AccentColour };
+            protected override DrawableDropdownMenuItem CreateDrawableDropdownMenuItem(MenuItem item) {
+                // MenuItem menuItem = new MenuItem(Properties.strings.ResourceManager.GetString(item.Text.Value) ?? item.Text.Value, item.Action.Value);
+                return new DrawableOsuTabDropdownMenuItem(item) { AccentColour = AccentColour };
+            }
 
             private class DrawableOsuTabDropdownMenuItem : DrawableOsuDropdownMenuItem
             {

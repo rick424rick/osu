@@ -135,6 +135,8 @@ namespace osu.Game.Configuration
 
             Set(OsuSetting.IntroSequence, IntroSequence.Triangles);
 
+            Set(OsuSetting.Locale, Locale.English);
+
             Set(OsuSetting.MenuBackgroundSource, BackgroundSource.Skin);
             Set(OsuSetting.SeasonalBackgroundMode, SeasonalBackgroundMode.Sometimes);
 
@@ -260,6 +262,7 @@ namespace osu.Game.Configuration
         ScalingSizeY,
         UIScale,
         IntroSequence,
+        Locale,
         UIHoldActivationDelay,
         HitLighting,
         MenuBackgroundSource,

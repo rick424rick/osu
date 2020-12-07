@@ -11,7 +11,7 @@ namespace osu.Game.Overlays.Settings.Sections.UserInterface
 {
     public class MainMenuSettings : SettingsSubsection
     {
-        protected override string Header => "Main Menu";
+        protected override string Header => Properties.strings.MainMenu;
 
         [BackgroundDependencyLoader]
         private void load(OsuConfigManager config)
@@ -20,29 +20,29 @@ namespace osu.Game.Overlays.Settings.Sections.UserInterface
             {
                 new SettingsCheckbox
                 {
-                    LabelText = "Interface voices",
+                    LabelText = Properties.strings.InterfaceVoices,
                     Current = config.GetBindable<bool>(OsuSetting.MenuVoice)
                 },
                 new SettingsCheckbox
                 {
-                    LabelText = "osu! music theme",
+                    LabelText = Properties.strings.MusicTheme,
                     Current = config.GetBindable<bool>(OsuSetting.MenuMusic)
                 },
                 new SettingsDropdown<IntroSequence>
                 {
-                    LabelText = "Intro sequence",
+                    LabelText = Properties.strings.IntroSequence,
                     Current = config.GetBindable<IntroSequence>(OsuSetting.IntroSequence),
                     Items = Enum.GetValues(typeof(IntroSequence)).Cast<IntroSequence>()
                 },
                 new SettingsDropdown<BackgroundSource>
                 {
-                    LabelText = "Background source",
+                    LabelText = Properties.strings.BackgroundSource,
                     Current = config.GetBindable<BackgroundSource>(OsuSetting.MenuBackgroundSource),
                     Items = Enum.GetValues(typeof(BackgroundSource)).Cast<BackgroundSource>()
                 },
                 new SettingsDropdown<SeasonalBackgroundMode>
                 {
-                    LabelText = "Seasonal backgrounds",
+                    LabelText = Properties.strings.SeasonalBackgrounds,
                     Current = config.GetBindable<SeasonalBackgroundMode>(OsuSetting.SeasonalBackgroundMode),
                     Items = Enum.GetValues(typeof(SeasonalBackgroundMode)).Cast<SeasonalBackgroundMode>()
                 }

@@ -9,7 +9,7 @@ namespace osu.Game.Overlays.Settings.Sections
 {
     public class UserInterfaceSection : SettingsSection
     {
-        public override string Header => "User Interface";
+        public override string Header => Properties.strings.UserInterface;
 
         public override Drawable CreateIcon() => new SpriteIcon
         {
@@ -22,6 +22,7 @@ namespace osu.Game.Overlays.Settings.Sections
             {
                 new GeneralSettings(),
                 new MainMenuSettings(),
+                new LocalizationSettings(),
                 new SongSelectSettings()
             };
         }

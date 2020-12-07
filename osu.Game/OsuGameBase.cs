@@ -39,6 +39,8 @@ using osu.Game.Scoring;
 using osu.Game.Skinning;
 using osuTK.Input;
 using RuntimeInfo = osu.Framework.RuntimeInfo;
+using System.Threading;
+using System.Globalization;
 
 namespace osu.Game
 {
@@ -106,6 +108,8 @@ namespace osu.Game
         protected Bindable<WorkingBeatmap> Beatmap { get; private set; } // cached via load() method
 
         private Bindable<bool> fpsDisplayVisible;
+
+        private Bindable<Locale> currentLocale;
 
         public virtual Version AssemblyVersion => Assembly.GetEntryAssembly()?.GetName().Version ?? new Version();
 
@@ -333,6 +337,28 @@ namespace osu.Game
             fpsDisplayVisible.TriggerChange();
 
             FrameStatistics.ValueChanged += e => fpsDisplayVisible.Value = e.NewValue != FrameStatisticsMode.None;
+
+            currentLocale = LocalConfig.GetBindable<Locale>(OsuSetting.Locale);
+            currentLocale.ValueChanged += updateLocale;
+            currentLocale.TriggerChange();
+        }
+
+        private void updateLocale(ValueChangedEvent<Locale> obj)
+        {
+            switch(obj.NewValue)
+            {
+                case Locale.English:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+                    break;
+                case Locale.Chinese:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+                    break;
+                case Locale.Japanese:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void runMigrations()
